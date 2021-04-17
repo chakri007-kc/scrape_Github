@@ -1,6 +1,8 @@
 # **Scraping Github** 
 ## This project is done by using react and github api
 ***
+## website Link: [Click here](https://scrape-github.netlify.app/)
+***
 # Homepage
 ![Homepage](src/Screenshot1.png)
 
@@ -19,5 +21,4 @@
 ## Remove all button clears all users
 ![remove_all](src/removeall1.gif)
 
-***
-## website Link: [Click here](https://scrape-github.netlify.app/)
+
