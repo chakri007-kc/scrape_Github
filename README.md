@@ -8,7 +8,7 @@
 ![user-info](src/userinfo.png)
 
 # Search User
-## By Github username it gives the user information
+## By providing Github username, it gives the user information
 ![search](src/search_user.gif)
 
 # Remove User
@@ -16,5 +16,5 @@
 ![remove](src/remove.gif)
 
 # Remove All Users
-## Remove all button clears the all users
+## Remove all button clears all users
 ![remove_all](src/removeall1.gif)
