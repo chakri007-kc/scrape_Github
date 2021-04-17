@@ -1,0 +1,77 @@
+import React, { Component } from 'react'
+import axios from "axios";
+import './git.css'
+const API_URL = "https://api.github.com/users";
+class list extends Component{
+    constructor(props)
+    {
+        super(props);
+        this.state={name:"", friends:""}
+        this.add=this.add.bind(this);
+        this.handle=this.handle.bind(this);
+        // this.getgit=this.getgit.bind(this);
+    }
+    add(evt)
+    {        
+        this.setState({[evt.target.name]:evt.target.value});
+    }
+    async handle(evt)
+    {
+        evt.preventDefault();
+        console.log("hii");
+
+        try{
+            // if(this.state.friends === null)
+            // {
+            //     throw new Error("Invalid id"); 
+            // }
+                 const link=await axios.get(`${API_URL}/${this.state.name}`);
+        this.setState({friends:link.data});
+            // const newbox={...this.state, id: uuidv4()};
+            this.props.kk(this.state.friends);
+            this.setState({name:"",friends:""})
+        }
+        catch(err)
+        {
+            alert("Invalid id")
+        }
+        
+    }
+    // async componentDidMount(){
+    //     // let link=await axios.get(`${API_URL}/jamiyashwanth`);
+    //     // console.log("hello");
+    //     // this.setState({friends:link});
+    // }
+
+    // async getgit()
+    // {
+    //     // console.log(this.state.name);
+    //     let link=await axios.get(`${API_URL}/${this.state.name}`);
+    //     // fetch(`${API_URL}/jamiyashwanth`);
+    //     // console.log(link.data); 
+    //     this.setState({friends:link.data});
+    //     console.log("hello");
+    //     // console.log(this.state.friends.id)
+    // }
+    render(){
+        return(
+            <div onSubmit={this.handle} className="formdiv">
+                <form className="forms">
+                    <label htmlFor='name'> <i class="fab fa-github" ></i>  Github user id: </label>
+                        <input
+                         className="all"
+                         type="text"
+                        id="name"
+                        name="name"
+                        placeholder="User id"
+                        value={this.state.name}
+                        onChange={this.add}
+                    />
+                    <button className="allbutton" ><i class="fas fa-search"></i></button>
+                </form>                
+                <button className="clear" onClick={this.props.rr}>Remove all</button>
+            </div>
+        );
+    }
+}
+export default list;
