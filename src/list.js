@@ -9,7 +9,6 @@ class list extends Component{
         this.state={name:"", friends:""}
         this.add=this.add.bind(this);
         this.handle=this.handle.bind(this);
-        // this.getgit=this.getgit.bind(this);
     }
     add(evt)
     {        
@@ -27,7 +26,6 @@ class list extends Component{
             // }
                  const link=await axios.get(`${API_URL}/${this.state.name}`);
         this.setState({friends:link.data});
-            // const newbox={...this.state, id: uuidv4()};
             this.props.kk(this.state.friends);
             this.setState({name:"",friends:""})
         }
@@ -37,22 +35,6 @@ class list extends Component{
         }
         
     }
-    // async componentDidMount(){
-    //     // let link=await axios.get(`${API_URL}/jamiyashwanth`);
-    //     // console.log("hello");
-    //     // this.setState({friends:link});
-    // }
-
-    // async getgit()
-    // {
-    //     // console.log(this.state.name);
-    //     let link=await axios.get(`${API_URL}/${this.state.name}`);
-    //     // fetch(`${API_URL}/jamiyashwanth`);
-    //     // console.log(link.data); 
-    //     this.setState({friends:link.data});
-    //     console.log("hello");
-    //     // console.log(this.state.friends.id)
-    // }
     render(){
         return(
             <div onSubmit={this.handle} className="formdiv">

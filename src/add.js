@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import List from './list'
 import Git from './git'
-// import Poke from './download.png'
-    import './git.css'
-// import axios from "axios";
-// const API_URL = "https://api.github.com/users";
+import './git.css'
 class add extends Component{
     constructor(props)
     {
@@ -26,22 +23,6 @@ class add extends Component{
     {
         this.setState({all: []})
     }
-    // async componentDidMount(){
-       
-    //     console.log("hii");
-
-    //     this.state.all.map(k=>{
-    //             let link1=await axios.get(`${API_URL}/${k.name}`);
-    //             this.setState({friends: link1});
-    //     })
-    // }
-    // async getgit()
-    // {
-        // let link2=await axios.get(`${API_URL}/jamiyashwanth/`);
-        // fetch(`${API_URL}/jamiyashwanth`);
-        // console.log("hii");
-    // }
-
     persons()
     {
         return(
@@ -70,11 +51,8 @@ class add extends Component{
     render(){
         return(
             <div>
-                {/* <img  className="displayed" src={Poke} alt="hiii" /> */}
                 <List kk={this.list} rr={()=>this.clear()}/>
-                {/* <button className="clear" onClick={this.clear}>Remove all</button> */}
                 {this.persons()}
-                {/* {console.log(this.props.name)} */}
                 
             </div>
         );

@@ -2,21 +2,12 @@ body {
   
   background-color:black;
    background-image: url("/src/9919.png");
-	/* opacity: 0.8; */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-   /* display: block;
-    margin-left: auto;
-    margin-right: auto ;
-    position: relative; */
     top: 50%;   
-  /* object-fit: cover;  */
   margin: 0;
   font-family: 'Comfortaa', cursive;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

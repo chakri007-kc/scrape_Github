@@ -12,11 +12,8 @@ class git extends Component{
                     <h3>Following : {this.props.following}</h3>
                     <h3>Followers : {this.props.following}</h3>    
                 </div>
-                     
-                {/* <h3></h3> */}
                 <h3>Account created : {this.props.create}</h3>
                 <h3>Last post : {this.props.last_post}</h3>
-                {/* <h3>{this.props.url}</h3> */}
                 <h3>Profile : <a href={this.props.url} target="_blank" rel="noopener noreferrer">click here</a></h3>   
 
                <h3>Repo Url : <a href={this.props.repo} target="_blank" rel="noopener noreferrer">click here</a></h3> 
