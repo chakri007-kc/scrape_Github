@@ -1,7 +1,7 @@
 # **Scraping Github** 
 ## This project is done by using react and github api
 ***
-## website Link: [Click here](https://scrape-github.netlify.app/)
+## website Link: [Click here](https://chakri-scrape-github.netlify.app/)
 ***
 # Homepage
 ![Homepage](src/Screenshot1.png)
